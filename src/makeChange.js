@@ -5,34 +5,18 @@ export default function makeChange({price, amountGiven}) {
 
 class Change{
   constructor(amount){
-    this.quarters = this.getQuarters(amount);
-    this.dimes = this.getDimes(amount - this.quarters*25);
-    this.nickels = this.getNickels(amount - this.quarters*25 -this.dimes*10);
-    this.pennies = amount - this.quarters*25 -this.dimes*10 -this.nickels*5;
+    this.quarters = this.getCoins(amount,25);
+    this.dimes = this.getCoins(amount%25,10);
+    this.nickels = this.getCoins(amount%25%10,5);
+    this.pennies = amount%5;
   }
 
-  getQuarters(amount){
-    let quarters = 0
-    while (amount >= 25){
-      amount -= 25;
-      quarters++
+  getCoins(amount,denomination){
+    let coins = 0
+    while (amount >= denomination){
+      amount -= denomination;
+      coins++
     }
-    return quarters
-  }
-  getDimes(amount){
-    let dimes = 0
-    while (amount >= 10){
-      amount -= 10;
-      dimes++
-    }
-    return dimes
-  }
-  getNickels(amount){
-    let nickels = 0
-    while (amount >= 5){
-      amount -= 5;
-      nickels++
-    }
-    return nickels
+    return coins
   }
 }
