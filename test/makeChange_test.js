@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import makeChange from '../src/makeChange'
 
-describe.only('makeChange()', function(){
+describe('makeChange()', function(){
 
   it('should be a function', function(){
     expect(makeChange).to.be.a('function')
