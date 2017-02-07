@@ -1,8 +1,7 @@
-
 import { expect } from 'chai'
 import fizzBuzz from '../src/fizzBuzz.js'
 
-describe.only('fizzBuzz()', function(){
+describe('fizzBuzz()', function(){
 
   it('should be a function', function(){
     expect(fizzBuzz).to.be.a('function')
