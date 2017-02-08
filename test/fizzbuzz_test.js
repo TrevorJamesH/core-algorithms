@@ -1,4 +1,3 @@
-
 import { expect } from 'chai'
 import fizzBuzz from '../src/fizzBuzz.js'
 
