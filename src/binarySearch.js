@@ -7,19 +7,17 @@ export default function binarySearch(array, targetValue){
 	let min = 0;
 	let max = array.length - 1;
   let guess
-    while(max > min) {
-    guess = Math.round((max + min) / 2);
-    console.log('guess: ' + guess)
+  while(max > min) {
+  	guess = Math.round((max + min) / 2);
     if(array[guess] === targetValue){
-        return guess
+      return guess
     }
     if(array[guess] < targetValue){
-        min = guess + .5
+      min = guess + .5
     }
     else if(array[guess] > targetValue){
-        max = guess - .5
+      max = guess - .5
     }
   }
-
-    return false;
-    }
+return false;
+}
