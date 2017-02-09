@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import connectedGraph from '../src/connectedGraph'
 
-describe.only('connectedGraph()', function(){
+describe('connectedGraph()', function(){
 
   it('should be a function', function(){
     expect(connectedGraph).to.be.a('function')
