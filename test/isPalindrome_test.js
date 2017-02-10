@@ -7,6 +7,10 @@ describe('isPalindrome()', function() {
     expect(isPalindrome).to.be.a('function')
   })
 
+  it('should only take a string as a parameter', function(){
+    expect(isPalindrome(20)).to.equal("Wrong Data Type")
+  })
+
   context("Is given: radar", function() {
     it('should return true', function() {
       expect(isPalindrome('radar')).to.equal(true)

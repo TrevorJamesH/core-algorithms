@@ -1,4 +1,9 @@
+import dataTypeCheck from '../src/dataTypeCheck'
 export default function setInstersection(array, intersect) {
+
+  if(!dataTypeCheck(array,'array')) {
+    return "Wrong Data Type"
+  }
 
 let result = []
   for(let i=0;i<array.length;i++) {

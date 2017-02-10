@@ -3,9 +3,15 @@ import setSymmetricDifference from '../src/setSymmetricDifference'
 
 describe('setSymmetricDifference()', function() {
 
+
   it('should be a function', function() {
     expect(setSymmetricDifference).to.be.a('function')
   })
+
+  it('should only take arrays as a parameter', function() {
+    expect(setSymmetricDifference('yo')).to.equal("Wrong Data Type")
+  })
+
 
   context("when given [1,2,3,4] and [3,4,5,6]", function() {
     it("should return [5,6]", function() {

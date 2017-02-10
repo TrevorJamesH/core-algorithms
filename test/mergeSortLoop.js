@@ -1,10 +1,14 @@
 import { expect } from 'chai'
-import mergeSort from '../src/mergeSort'
+import mergeSort from '../src/mergeSortLoop'
 
 describe('mergeSort()', function() {
 
   it('should be a function', function() {
     expect(mergeSort).to.be.a('function')
+  })
+
+  it('should only sort arrays', function() {
+    expect(mergeSort(12)).to.equal("Wrong Data Type")
   })
 
   context("when given [9,4,6,8,7,5,1,3,2]", function() {

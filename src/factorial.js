@@ -1,5 +1,8 @@
-export default function factorial(number){
-  if(number < 0) {
+export default function factorial(number) {
+
+
+
+  if(number < 0 || isNaN(number)) {
     return undefined
   }
   if(number === 0) {

@@ -1,4 +1,11 @@
-export default function mergeSort(toSort){
+import dataTypeCheck from '../src/dataTypeCheck'
+
+export default function mergeSort(toSort) {
+
+  if(!dataTypeCheck(toSort,'array')) {
+    return "Wrong Data Type"
+  }
+
 let currentLevel = []
   toSort.map( function(number) {
     let subArray = []

@@ -7,6 +7,10 @@ describe('fibonacci()', function() {
     expect(fibonacci).to.be.a('function')
   })
 
+  it('should only take a number as a parameter', function(){
+    expect(fibonacci('whaddup')).to.eql("Wrong Data Type")
+  })
+
   it('should return an array of length 50, whos 9th value is 34', function() {
     const fib = fibonacci(50)
     expect(fib).to.be.an('array')
