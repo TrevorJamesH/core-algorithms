@@ -1,14 +1,14 @@
 import { expect } from 'chai'
 import connectedGraph from '../src/connectedGraph'
 
-describe('connectedGraph()', function(){
+describe('connectedGraph()', function() {
 
-  it('should be a function', function(){
+  it('should be a function', function() {
     expect(connectedGraph).to.be.a('function')
   })
 
-  context("when given a graph object", function(){
-    it("should return true if its connected", function(){
+  context("when given a graph object", function() {
+    it("should return true if its connected", function() {
       const graph = {
         'a': ['b', 'c'],
         'b': ['a', 'd'],
@@ -18,7 +18,7 @@ describe('connectedGraph()', function(){
       expect(connectedGraph(graph)).to.equal(true)
     })
 
-    it("should return false if its not connected", function(){
+    it("should return false if its not connected", function() {
       const graph = {
         'a': ['b'],
         'b': ['a'],
