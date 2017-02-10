@@ -7,6 +7,10 @@ describe('setIntersection()', function() {
     expect(setIntersection).to.be.a('function')
   })
 
+  it('should only take an array', function() {
+    expect(setIntersection('poop')).to.equal("Wrong Data Type")
+  })
+
   context("when given [1,2,3,4] and [3,4,5,6]", function() {
     it("should return [3,4]", function() {
       expect(setIntersection([1,2,3,4], [3,4,5,6])).to.eql([3,4])

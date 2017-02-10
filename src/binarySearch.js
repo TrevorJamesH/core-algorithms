@@ -1,5 +1,10 @@
+import dataTypeCheck from '../src/dataTypeCheck'
+
 export default function binarySearch(array, targetValue) {
 
+	if(!dataTypeCheck(array,'array')) {
+		return "Wrong Data Type"
+	}
 	let min = 0;
 	let max = array.length - 1;
   let guess

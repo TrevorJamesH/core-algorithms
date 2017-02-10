@@ -29,5 +29,11 @@ describe('factorial()', function() {
     it("should return undefined", function() {
       expect(factorial(-1)).to.equal(undefined)
     })
+
+    context("when given a non number", function() {
+      it("should return undefined", function() {
+        expect(factorial([])).to.eql(NaN)
+      })
   })
+})
 })

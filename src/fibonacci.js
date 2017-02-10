@@ -1,18 +1,24 @@
-export default function fibonacci(n){
+import dataTypeCheck from '../src/dataTypeCheck'
+
+export default function fibonacci(number){
+
+  if(!dataTypeCheck(number,'number')) {
+    return "Wrong Data Type"
+  }
 
   let fib = []
-  if(n===0) {
+  if(number === 0) {
     return fib
   }
   fib.push(0);
-  if(n===1) {
+  if(number === 1) {
     return fib
   }
   fib.push(1);
-  if(n===2) {
+  if(number === 2) {
     return fib
   }
-  for(let i=2;i<n;i++) {
+  for(let i=2;i<number;i++) {
     fib.push(fib[i-1]+fib[i-2])
   }
   return fib

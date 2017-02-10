@@ -1,9 +1,12 @@
 import { expect } from 'chai'
 import closestPair from '../src/closestPair'
 
-describe.only('closestPair()', function() {
+describe('closestPair()', function() {
   it('should be a function', function() {
     expect(closestPair).to.be.a('function')
+  })
+  it('should not take any type but an object', function() {
+    expect(closestPair(1)).to.equal("Wrong Data Type")
   })
 
   it('should return the shortest distance between two points', function() {

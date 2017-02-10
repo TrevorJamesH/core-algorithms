@@ -1,5 +1,9 @@
+import dataTypeCheck from '../src/dataTypeCheck'
 export default function closestPair(points) {
 
+  if(!dataTypeCheck(points,'array')) {
+    return "Wrong Data Type"
+  }
   let lowestDistance = pythagorean(points[0], points[1])
   let closestPoints = []
   for (let i = 0; i < points.length; i++) {

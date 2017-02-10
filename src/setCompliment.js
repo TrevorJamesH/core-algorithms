@@ -1,4 +1,9 @@
-export default function setCompliment(array, compliment){
+import dataTypeCheck from '../src/dataTypeCheck'
+export default function setCompliment(array, compliment) {
+
+  if(!dataTypeCheck(array,'array')) {
+    return "Wrong Data Type"
+  }
 
 let result = []
   for(let i=0;i<compliment.length;i++) {

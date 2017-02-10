@@ -7,6 +7,10 @@ describe('setCompliment()', function() {
     expect(setCompliment).to.be.a('function')
   })
 
+  it('should only take an array', function(){
+    expect(setCompliment(4345452)).to.equal("Wrong Data Type")
+  })
+
   context("when given [1,2,3,4] and [3,4,5,6]", function() {
     it("should return [5,6]", function() {
       expect(setCompliment([1,2,3,4], [3,4,5,6])).to.eql([5,6])
