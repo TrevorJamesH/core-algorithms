@@ -2,7 +2,6 @@ export default function closestPair(points) {
 
   let lowestDistance = pythagorean(points[0], points[1])
   let closestPoints = []
-
   for (let i = 0; i < points.length; i++) {
     for (let j = 0; j < points.length; j++) {
       if(points[i] !== points[j] && pythagorean(points[i], points[j]) < lowestDistance) {

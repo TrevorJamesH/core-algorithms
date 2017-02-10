@@ -8,7 +8,7 @@ export default function mergeSort(array) {
   return mergeBoth(mergeSort(left), mergeSort(right))
 }
 
-  function mergeBoth(left, right){
+  function mergeBoth(left, right) {
     let resultsArray = []
     while(left.length && right.length) {
       if(left[0] <= right[0]){

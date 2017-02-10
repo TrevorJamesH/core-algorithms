@@ -1,10 +1,11 @@
 export default function makeChange({price, amountGiven}) {
-  let change = amountGiven - price
-  return new Change(change)
+
+let change = amountGiven - price
+return new Change(change)
 }
 
-class Change{
-  constructor(amount){
+class Change {
+  constructor(amount) {
     this.quarters = this.getCoins(amount,25);
     this.dimes = this.getCoins(amount%25,10);
     this.nickels = this.getCoins(amount%25%10,5);
